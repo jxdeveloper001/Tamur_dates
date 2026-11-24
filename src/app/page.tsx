@@ -30,18 +30,15 @@ export default function Home() {
       {/* 4 & 5. Continuous Visual Canvas: Product Details & Product Masterpiece Sharing ONE Background (Attachment 1) */}
       <div className="relative overflow-hidden border-t border-[#E0CFBA]/70">
         {/* ONE continuous photographic background spanning both sections seamlessly.
-            Intentionally soft-blurred at full resolution (blur + slight upscale
-            of the source file) so it reads as a dreamy backdrop, never pixelated.
-            The hero background is left exactly as it is. */}
+            The lantern + dates photo, at its true colours with only a very
+            light blur — no white veil, so the photo shows as it is. */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none blur-[5px] scale-110"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none blur-[2px] scale-[1.04]"
           style={{
-            backgroundImage: "url('/assets/bg-shared-details-masterpiece.jpg')",
+            backgroundImage: "url('/assets/bg-details-lantern.jpg')",
           }}
           aria-hidden="true"
         />
-        {/* Warm cream translucent veil preserving photography sharpness, warm lantern light and contrast */}
-        <div className="absolute inset-0 bg-[#EDE2D0]/76 pointer-events-none" />
 
         {/* 4. Product Details */}
         <ProductDetails />

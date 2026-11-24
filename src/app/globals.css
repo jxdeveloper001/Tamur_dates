@@ -5,8 +5,8 @@
   --font-arabic: "Amiri", "Traditional Arabic", serif;
   --font-sans: "Anek Bangla", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-bengali: "Anek Bangla", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-bengali-heading: "Galada", "Baloo Da 2", "Anek Bangla", sans-serif;
-  --font-bengali-display: "Galada", "Baloo Da 2", "Anek Bangla", sans-serif;
+  --font-bengali-heading: "Baloo Da 2", "Anek Bangla", sans-serif;
+  --font-bengali-display: "Baloo Da 2", "Anek Bangla", sans-serif;
   
   /* Slightly Deeper & Warmer Cream Palette */
   --color-cream-warm: #EDE2D0;
@@ -33,19 +33,12 @@ body {
   line-height: 1.6;
 }
 
-/* Arabic-calligraphy-inspired Bengali heading typography.
-   The reference (Makah / Madinah / Jeddah / Riyadh poster) is a flowing,
-   thick-stroke Arabic calligraphy style with a long sweeping baseline and
-   twin dots — Galada is the Bengali display face with the closest flowing,
-   calligraphic ductus, so headings render in that same spirit in Bangla.
-   Galada ships in a single 400 weight, so headings stay at 400 and let
-   its naturally thick strokes carry the look (no faux-bold). */
+/* Bengali display headings — Baloo Da 2, bold and tight, as originally designed. */
 .font-bengali-heading {
-  font-family: "Galada", "Baloo Da 2", "Anek Bangla", sans-serif;
-  font-weight: 400;
-  line-height: 1.32;
-  letter-spacing: 0;
-  text-wrap: balance;
+  font-family: "Baloo Da 2", "Anek Bangla", sans-serif;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.015em;
 }
 
 .font-bengali-subheading {

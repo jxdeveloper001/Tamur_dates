@@ -47,16 +47,16 @@ export default function ProductDetails() {
         
         {/* Section Heading: Centered Editorial Style */}
         <div className="text-center max-w-2xl mx-auto space-y-2.5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-[#E0CFBA] bg-[#F4EAE0]/80 backdrop-blur-xs text-[#735744] text-xs font-medium">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-white/25 bg-[#493326]/70 backdrop-blur-xs text-[#F4EAE0] text-xs font-medium">
             <span>পণ্যের বিশেষত্ব ও গুণমান</span>
-            <span className="text-[#E0CFBA]">•</span>
-            <span className="font-arabic text-sm text-[#493326]">تفاصيل الجودة</span>
+            <span className="text-[#CDB69D]">•</span>
+            <span className="font-arabic text-sm text-[#E0CFBA]">تفاصيل الجودة</span>
           </div>
-          <h2 className="font-bengali-heading text-3xl sm:text-5xl font-bold tracking-tight text-[#493326]">
+          <h2 className="font-bengali-heading text-3xl sm:text-5xl font-bold tracking-tight text-[#F6EFE4] drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]">
             স্বাদে ও মানে প্রিমিয়াম জাম্বো মেডজুল
           </h2>
-          <ArabicHeadingFlourish align="center" color="#735744" width={160} className="pt-1.5" />
-          <p className="text-xs sm:text-sm text-[#735744] leading-relaxed max-w-lg mx-auto pt-1">
+          <ArabicHeadingFlourish align="center" color="#E5D6C2" width={160} className="pt-1.5" />
+          <p className="text-xs sm:text-sm text-[#EDE2D0]/90 leading-relaxed max-w-lg mx-auto pt-1 drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]">
             হাতে বাছাইকৃত প্রতিটি ফলের অনন্য বৈশিষ্ট্য ও খাঁটি সতেজতার নিশ্চয়তা
           </p>
         </div>
@@ -96,7 +96,7 @@ export default function ProductDetails() {
               return (
                 <div
                   key={idx}
-                  className={`group relative rounded-2xl border border-[#E0CFBA]/80 bg-[#F4EAE0]/75 p-5 sm:p-6 transition-all duration-300 hover:bg-[#493326] hover:border-[#CDB69D] hover:ring-1 hover:ring-[#CDB69D] hover:shadow-xl hover:-translate-y-1.5 cursor-pointer flex flex-col items-center text-center ${
+                  className={`group relative rounded-2xl border border-[#E0CFBA]/80 bg-[#F4EAE0]/90 p-5 sm:p-6 transition-all duration-300 hover:bg-[#493326] hover:border-[#CDB69D] hover:ring-1 hover:ring-[#CDB69D] hover:shadow-xl hover:-translate-y-1.5 cursor-pointer flex flex-col items-center text-center ${
                     idx === 3 || idx === 4
                       ? "sm:col-span-1 lg:translate-x-1/2"
                       : ""

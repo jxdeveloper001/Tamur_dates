@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { IconShoppingBag, IconCheck, IconTruck } from "./Icons";
+import { IconShoppingBag } from "./Icons";
 import { ProductOption } from "../data/siteData";
 import OrderSuccessModal, { OrderConfirmationData } from "./OrderSuccessModal";
 import ArabicHeadingFlourish from "./ArabicHeadingFlourish";
@@ -89,24 +89,17 @@ export default function OrderSection({ selectedTier }: OrderSectionProps) {
     }, 600);
   };
 
-  const orderSteps = [
-    { num: "১", title: "ফর্ম পূরণ করুন", desc: "নাম, ফোন ও ঠিকানা দিন" },
-    { num: "২", title: "কল করে কনফার্ম", desc: "আমাদের প্রতিনিধি কল করবেন" },
-    { num: "৩", title: "পণ্য হাতে পেয়ে পেমেন্ট", desc: "দেখে নিয়ে নগদে পরিশোধ" },
-  ];
-
   return (
     <section id="order" className="relative py-20 sm:py-28 text-[#493326] overflow-hidden">
-      {/* 1. Surrounding Order Section Photographic Background (Exact Attached Mosque Sunset & Dates Image) */}
+      {/* 1. Surrounding Order Section Photographic Background (mosque sunset
+          & dates photo, true colours, only a very light blur — no white veil) */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none blur-[4px] scale-110"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none blur-[2px] scale-[1.04]"
         style={{
-          backgroundImage: "url('/assets/bg-order-mosque-dates.jpg')",
+          backgroundImage: "url('/assets/bg-order-mosque-sunset.jpg')",
         }}
         aria-hidden="true"
       />
-      {/* 2. Warm Cream Translucent Softening Overlay for Natural Details and Ideal Contrast */}
-      <div className="absolute inset-0 bg-[#EDE2D0]/85 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
         
@@ -116,11 +109,11 @@ export default function OrderSection({ selectedTier }: OrderSectionProps) {
             <IconCash className="w-4 h-4" />
             <span>শুধুমাত্র ক্যাশ অন ডেলিভারি</span>
           </div>
-          <h2 className="font-bengali-heading text-4xl sm:text-5xl text-[#493326] pt-1">
+          <h2 className="font-bengali-heading text-4xl sm:text-5xl text-[#F6EFE4] drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)] pt-1">
             আপনার পছন্দের প্যাকেজ অর্ডার করুন
           </h2>
-          <ArabicHeadingFlourish align="center" color="#735744" width={150} className="pt-1" />
-          <p className="text-xs sm:text-sm text-[#735744] pt-1 leading-relaxed">
+          <ArabicHeadingFlourish align="center" color="#E5D6C2" width={150} className="pt-1" />
+          <p className="text-xs sm:text-sm text-[#EDE2D0]/90 pt-1 leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]">
             কোনো অগ্রিম পেমেন্ট নয় — পণ্য হাতে পেয়ে দেখে নগদে মূল্য পরিশোধ করুন। সারা দেশে দ্রুত হোম ডেলিভারি।
           </p>
         </div>
@@ -137,19 +130,6 @@ export default function OrderSection({ selectedTier }: OrderSectionProps) {
           <span aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-1 rounded-full bg-gradient-to-r from-transparent via-[#A98548] to-transparent z-[2]" />
 
           <div className="relative z-[2] space-y-7">
-            {/* How ordering works — 3 steps */}
-            <div className="grid grid-cols-3 gap-2 sm:gap-3 text-center">
-              {orderSteps.map((step) => (
-                <div key={step.num} className="rounded-2xl bg-[#EDE2D0]/90 border border-[#E0CFBA] px-2 py-3 space-y-1">
-                  <span className="mx-auto w-7 h-7 rounded-full bg-[#493326] text-[#F4EAE0] text-xs font-bold flex items-center justify-center font-bengali-heading">
-                    {step.num}
-                  </span>
-                  <p className="text-[11px] sm:text-xs font-semibold text-[#493326] leading-tight">{step.title}</p>
-                  <p className="text-[10px] text-[#735744] leading-tight hidden sm:block">{step.desc}</p>
-                </div>
-              ))}
-            </div>
-
             {/* Synchronized Selected Product Display */}
             <div className="rounded-2xl bg-[#EDE2D0]/90 border border-[#E0CFBA] p-4 sm:p-5 space-y-3">
               <div className="flex items-center gap-3.5 sm:gap-4">
@@ -207,9 +187,6 @@ export default function OrderSection({ selectedTier }: OrderSectionProps) {
                     ৳{grandTotal.toLocaleString()}
                   </span>
                 </div>
-                <p className="text-center text-[11px] text-[#735744] pt-1">
-                  এই টাকাটাই ডেলিভারির সময় নগদে দেবেন — এর বাইরে আর কিছু নয়
-                </p>
               </div>
             </div>
 
@@ -320,37 +297,6 @@ export default function OrderSection({ selectedTier }: OrderSectionProps) {
                 )}
               </div>
 
-              {/* Payment Method — Cash on Delivery ONLY */}
-              <div>
-                <label className="block text-xs font-semibold tracking-wider text-[#735744] mb-1.5">
-                  পেমেন্ট মাধ্যম
-                </label>
-                <div className="rounded-2xl border-2 border-[#493326] bg-[#493326] text-[#F4EAE0] p-4 flex items-start gap-3 shadow-md">
-                  <span className="w-11 h-11 rounded-full bg-[#F4EAE0]/15 border border-[#F4EAE0]/25 flex items-center justify-center shrink-0">
-                    <IconCash className="w-5 h-5" />
-                  </span>
-                  <div className="min-w-0">
-                    <p className="font-bengali-heading text-lg leading-snug flex items-center gap-2 flex-wrap">
-                      ক্যাশ অন ডেলিভারি
-                      <span className="inline-flex items-center gap-1 text-[10px] font-sans font-bold tracking-wide bg-[#E0CFBA] text-[#493326] px-2 py-0.5 rounded-full">
-                        <IconCheck className="w-3 h-3" /> একমাত্র মাধ্যম
-                      </span>
-                    </p>
-                    <p className="text-[11px] sm:text-xs text-[#EDE2D0]/85 leading-relaxed pt-0.5">
-                      পণ্য হাতে পেয়ে দেখে নগদে মূল্য পরিশোধ করুন — কোনো অগ্রিম, বিকাশ বা কার্ড পেমেন্ট লাগবে না।
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-2 pt-2.5">
-                  {["অগ্রিম পেমেন্ট নেই", "পার্সেল দেখে পেমেন্ট", "সারা দেশে ডেলিভারি"].map((chip) => (
-                    <span key={chip} className="inline-flex items-center gap-1 text-[10px] sm:text-[11px] font-medium text-[#735744] bg-[#EDE2D0] border border-[#E0CFBA] px-2.5 py-1 rounded-full">
-                      <IconCheck className="w-3 h-3 text-[#493326]" />
-                      {chip}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
               {/* Submit Order Button with Periodic Light Shine Animation */}
               <div className="pt-2">
                 <button
@@ -372,10 +318,6 @@ export default function OrderSection({ selectedTier }: OrderSectionProps) {
                     )}
                   </span>
                 </button>
-                <p className="flex items-center justify-center gap-1.5 text-[11px] text-[#735744] pt-2.5 text-center">
-                  <IconTruck className="w-3.5 h-3.5 shrink-0" />
-                  পণ্য হাতে পেয়ে নগদে পরিশোধ করবেন — এখন কিছু দিতে হবে না
-                </p>
               </div>
 
             </form>
