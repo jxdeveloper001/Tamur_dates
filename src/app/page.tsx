@@ -36,7 +36,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
           style={{
-            backgroundImage: "url('/assets/bg-details-wooden-dates.jpg')",
+            backgroundImage: "url('/assets/bg-details-wooden-dates-v2.jpg')",
           }}
           aria-hidden="true"
         />
