@@ -30,15 +30,19 @@ export default function Home() {
       {/* 4 & 5. Continuous Visual Canvas: Product Details & Product Masterpiece Sharing ONE Background (Attachment 1) */}
       <div className="relative overflow-hidden border-t border-[#E0CFBA]/70">
         {/* ONE continuous photographic background spanning both sections seamlessly.
-            The lantern + dates photo, at its true colours with only a very
-            light blur — no white veil, so the photo shows as it is. */}
+            The wooden-board dates photo at its true colours — softened only by
+            a light layer of the site's own cream colour (no blur filter, which
+            costs scrolling smoothness). The hero background is left exactly as it is. */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none blur-[2px] scale-[1.04]"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
           style={{
-            backgroundImage: "url('/assets/bg-details-lantern.jpg')",
+            backgroundImage: "url('/assets/bg-details-wooden-dates.jpg')",
           }}
           aria-hidden="true"
         />
+        {/* Light cream layer — the site's own cream colour, just enough to
+            soften the photo while it stays clearly visible */}
+        <div className="absolute inset-0 bg-[#EDE2D0]/30 pointer-events-none" />
 
         {/* 4. Product Details */}
         <ProductDetails />
