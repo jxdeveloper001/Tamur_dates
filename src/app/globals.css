@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Baloo Da 2", "Noto Serif Bengali", "Tiro Bangla", "Cinzel", Georgia, serif;
+  --font-arabic: "Amiri", "Traditional Arabic", serif;
+  --font-sans: "Anek Bangla", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-bengali: "Anek Bangla", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-bengali-heading: "Baloo Da 2", "Anek Bangla", sans-serif;
+  --font-bengali-display: "Baloo Da 2", "Anek Bangla", sans-serif;
+  
+  /* Slightly Deeper & Warmer Cream Palette */
+  --color-cream-warm: #EDE2D0;
+  --color-cream-soft: #F4EAE0;
+  --color-cream-dark: #E0CFBA;
+  --color-cream-deep: #CDB69D;
+  --color-coffee-dark: #493326;
+  --color-coffee-muted: #735744;
+  --color-champagne-soft: #E5D5BF;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #EDE2D0;
+  color: #493326;
+  font-family: var(--font-bengali);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Exact Arabic-Inspired Bengali Heading Typography */
+.font-bengali-heading {
+  font-family: "Baloo Da 2", "Anek Bangla", sans-serif;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+}
+
+.font-bengali-subheading {
+  font-family: "Anek Bangla", sans-serif;
+  line-height: 1.35;
+}
+
+/* Tasteful Periodic Button Light-Shine Animation for ALL Primary Order Buttons */
+@keyframes button-shine {
+  0%, 72% {
+    transform: translateX(-160%) skewX(-20deg);
+    opacity: 0;
+  }
+  76% {
+    opacity: 0.55;
+  }
+  88% {
+    transform: translateX(260%) skewX(-20deg);
+    opacity: 0.55;
+  }
+  92%, 100% {
+    transform: translateX(260%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.shine-button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.shine-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.32) 50%,
+    transparent 100%
+  );
+  transform: translateX(-160%) skewX(-20deg);
+  animation: button-shine 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Continuous Review Slider Animation (Seamless Infinite RTL Marquee) */
+@keyframes rtl-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.reviews-marquee-track {
+  display: flex !important;
+  width: max-content !important;
+  animation: rtl-marquee 30s linear infinite !important;
+  will-change: transform;
+}
+
+.reviews-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shine-button::after {
+    display: none !important;
+    animation: none !important;
+  }
+  .reviews-marquee-track {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* Custom warm cream scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #EDE2D0;
+}
+::-webkit-scrollbar-thumb {
+  background: #CDB69D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #735744;
+}
+
+/* Selection */
+::selection {
+  background-color: #E0CFBA;
+  color: #493326;
+}
