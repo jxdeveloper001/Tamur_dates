@@ -80,19 +80,21 @@ export default function FAQ() {
                   </span>
                 </button>
 
-                {/* Answer — fast, snappy open/close: 350ms with a lively
+                {/* Answer — fast, snappy open/close: 250ms with a lively
                     ease-out curve, height + fade + a small slide of the text.
-                    The grid-rows trick animates the real content height:
-                    0fr (closed) -> 1fr (open), no fixed max-height guessing. */}
+                    Transition is scoped to grid rows + opacity only, so
+                    nothing else animates. The grid-rows trick animates the
+                    real content height: 0fr (closed) -> 1fr (open), no fixed
+                    max-height guessing. */}
                 <div
                   data-faq-answer
-                  className={`grid transition-all duration-[350ms] ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none ${
+                  className={`grid transition-[grid-template-rows,opacity] duration-[250ms] ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none ${
                     isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
                   <div className="overflow-hidden">
                     <div
-                      className={`px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-[#735744] leading-relaxed border-t border-[#E0CFBA]/70 transition-transform duration-[350ms] ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none ${
+                      className={`px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-[#735744] leading-relaxed border-t border-[#E0CFBA]/70 transition-transform duration-[250ms] ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none ${
                         isOpen ? "translate-y-0" : "-translate-y-1"
                       }`}
                     >
