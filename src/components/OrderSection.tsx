@@ -111,11 +111,11 @@ export default function OrderSection({ selectedTier }: OrderSectionProps) {
             <IconCash className="w-4 h-4" />
             <span>শুধুমাত্র ক্যাশ অন ডেলিভারি</span>
           </div>
-          <h2 className="font-bengali-heading text-shine text-4xl sm:text-5xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)] pt-1">
+          <h2 className="font-bengali-heading text-shine text-4xl sm:text-5xl text-shadow-photo pt-1">
             আপনার পছন্দের প্যাকেজ অর্ডার করুন
           </h2>
           <ArabicHeadingFlourish align="center" color="#E5D6C2" width={150} className="pt-1" />
-          <p className="text-xs sm:text-sm text-[#8E7054] pt-1 leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]">
+          <p className="text-xs sm:text-sm text-[#8E7054] pt-1 leading-relaxed text-shadow-photo-sm">
             কোনো অগ্রিম পেমেন্ট নয় — পণ্য হাতে পেয়ে দেখে নগদে মূল্য পরিশোধ করুন। সারা দেশে দ্রুত হোম ডেলিভারি।
           </p>
         </div>
