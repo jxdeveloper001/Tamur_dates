@@ -52,11 +52,11 @@ export default function ProductDetails() {
             <span className="text-[#CDB69D]">•</span>
             <span className="font-arabic text-sm text-[#E0CFBA]">تفاصيل الجودة</span>
           </div>
-          <h2 className="font-bengali-heading text-shine text-3xl sm:text-5xl font-bold tracking-tight text-shadow-photo">
+          <h2 className="font-bengali-heading text-[#F6EFE4] text-3xl sm:text-5xl font-bold tracking-tight text-shadow-photo">
             স্বাদে ও মানে প্রিমিয়াম জাম্বো মেডজুল
           </h2>
           <ArabicHeadingFlourish align="center" color="#E5D6C2" width={160} className="pt-1.5" />
-          <p className="text-xs sm:text-sm text-[#8E7054] leading-relaxed max-w-lg mx-auto pt-1 text-shadow-photo-sm">
+          <p className="text-xs sm:text-sm text-[#EDE2D0] leading-relaxed max-w-lg mx-auto pt-1 text-shadow-photo-sm">
             হাতে বাছাইকৃত প্রতিটি ফলের অনন্য বৈশিষ্ট্য ও খাঁটি সতেজতার নিশ্চয়তা
           </p>
         </div>

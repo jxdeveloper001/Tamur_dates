@@ -111,7 +111,7 @@ export default function OrderSection({ selectedTier }: OrderSectionProps) {
             <IconCash className="w-4 h-4" />
             <span>শুধুমাত্র ক্যাশ অন ডেলিভারি</span>
           </div>
-          <h2 className="font-bengali-heading text-shine text-4xl sm:text-5xl text-shadow-photo pt-1">
+          <h2 className="font-bengali-heading text-[#8E7054] text-4xl sm:text-5xl text-shadow-photo pt-1">
             আপনার পছন্দের প্যাকেজ অর্ডার করুন
           </h2>
           <ArabicHeadingFlourish align="center" color="#E5D6C2" width={150} className="pt-1" />

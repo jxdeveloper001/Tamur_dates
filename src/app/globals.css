@@ -166,40 +166,11 @@ body {
   z-index: 1;
 }
 
-/* Periodic light sweep across the over-photo headings — the same slow,
-   elegant shine as the order container, but clipped to the text itself.
-   Base colour is the user's #8E7054; a pale cream highlight travels
-   across the letters every few seconds, then parks off-screen. */
-@keyframes text-shine {
-  0%, 65% {
-    background-position: 120% 0;
-  }
-  82%, 100% {
-    background-position: -20% 0;
-  }
-}
-
-.text-shine {
-  background: linear-gradient(
-    110deg,
-    #8E7054 42%,
-    #F6EFE4 50%,
-    #8E7054 58%
-  );
-  background-size: 200% 100%;
-  background-repeat: no-repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  animation: text-shine 5.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
 /* Readable text over photos: a dark shadow for pale backgrounds plus a
    pale cream glow for dark backgrounds — one of the two always separates
    the letters from the photo behind them. Implemented as filter
    drop-shadows (not text-shadow) so it follows the glyph alpha and works
-   with .text-shine's background-clip:text. */
+   with background-clip:text (filter follows the glyph alpha). */
 .text-shadow-photo {
   filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.45)) drop-shadow(0 0 22px rgba(246, 239, 228, 0.55));
 }
@@ -240,12 +211,6 @@ body {
   .shine-button::after {
     display: none !important;
     animation: none !important;
-  }
-  .text-shine {
-    animation: none !important;
-    background: none !important;
-    color: #8E7054 !important;
-    -webkit-text-fill-color: #8E7054 !important;
   }
   .reviews-marquee-track {
     animation: none !important;
