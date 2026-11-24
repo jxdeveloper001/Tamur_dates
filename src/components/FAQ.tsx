@@ -42,9 +42,13 @@ export default function FAQ() {
                     : "border-[#E0CFBA] bg-[#F4EAE0]/85 hover:border-[#CDB69D] hover:bg-[#F4EAE0] hover:shadow-sm hover:-translate-y-0.5"
                 }`}
               >
-                {isOpen && (
-                  <span aria-hidden="true" className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#CDB69D] via-[#735744] to-[#CDB69D]" />
-                )}
+                {/* Left gold accent — fades in/out with the open state */}
+                <span
+                  aria-hidden="true"
+                  className={`absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#CDB69D] via-[#735744] to-[#CDB69D] transition-opacity duration-300 ${
+                    isOpen ? "opacity-100" : "opacity-0"
+                  }`}
+                />
                 <button
                   type="button"
                   onClick={() => toggle(idx)}
@@ -76,11 +80,21 @@ export default function FAQ() {
                   </span>
                 </button>
 
-                {isOpen && (
-                  <div className="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-[#735744] leading-relaxed border-t border-[#E0CFBA]/70 animate-in fade-in duration-200">
-                    <p className="pl-9">{faq.answer}</p>
+                {/* Answer — smooth height + fade animation on open/close.
+                    The grid-rows trick animates the real content height:
+                    0fr (closed) -> 1fr (open), no fixed max-height guessing. */}
+                <div
+                  data-faq-answer
+                  className={`grid transition-all duration-500 ease-in-out motion-reduce:transition-none ${
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-[#735744] leading-relaxed border-t border-[#E0CFBA]/70">
+                      <p className="pl-9">{faq.answer}</p>
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
             );
           })}
