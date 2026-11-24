@@ -54,7 +54,7 @@ export default function FloatingBar({ selectedTier }: { selectedTier?: ProductOp
         {/* CTA Button with periodic subtle shine */}
         <a
           href="#order"
-          className="shine-button flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#493326] text-[#F4EAE0] text-xs font-semibold tracking-wider hover:bg-[#38261C] active:scale-95 transition-all shadow-xs cursor-pointer"
+          className="shine-button btn-lift flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#493326] text-[#F4EAE0] text-xs font-semibold tracking-wider hover:bg-[#5C4033] active:scale-95 transition-all shadow-xs cursor-pointer"
         >
           <span className="relative z-10 flex items-center gap-1.5">
             <IconShoppingBag className="w-3.5 h-3.5" />

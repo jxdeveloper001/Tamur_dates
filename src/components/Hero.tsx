@@ -37,7 +37,7 @@ export default function Hero() {
         </div>
 
         {/* 2. Actual Dates Product Image directly BELOW Headline (Slightly Enlarged) */}
-        <div className="relative w-full max-w-[320px] sm:max-w-[400px] md:max-w-[450px] flex justify-center py-1">
+        <div className="relative w-full max-w-[320px] sm:max-w-[400px] md:max-w-[450px] flex justify-center py-1 float-soft">
           <img
             src="/assets/tamur-product.png"
             alt="তেমুর ১০০% প্রাকৃতিক প্রিমিয়াম জাম্বো মেডজুল খেজুর ৪০০ গ্রাম"
@@ -49,9 +49,12 @@ export default function Hero() {
         <div className="pt-1">
           <a
             href="#order"
-            className="shine-button inline-flex items-center justify-center px-9 sm:px-11 py-3.5 sm:py-4 rounded-full bg-[#F1E7D7] text-[#493326] font-semibold text-xs sm:text-sm tracking-wider hover:bg-[#E5D6C2] active:scale-95 transition-all shadow-xl cursor-pointer"
+            className="shine-button btn-lift group inline-flex items-center justify-center gap-2 px-9 sm:px-11 py-3.5 sm:py-4 rounded-full bg-[#F1E7D7] text-[#493326] font-semibold text-xs sm:text-sm tracking-wider hover:bg-[#E5D6C2] active:scale-95 transition-all shadow-xl cursor-pointer"
           >
             <span className="relative z-10">এখনই অর্ডার করুন</span>
+            <svg className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </a>
         </div>
 

@@ -5,7 +5,7 @@ import TamurLogo from "./TamurLogo";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#493326] text-[#EDE2D0] border-t border-[#735744]/40 py-16">
+    <footer className="bg-[#493326] text-[#EDE2D0] border-t-2 border-[#CDB69D]/60 py-16">
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-12 space-y-10">
         
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">

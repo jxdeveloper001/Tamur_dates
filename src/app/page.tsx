@@ -29,9 +29,12 @@ export default function Home() {
 
       {/* 4 & 5. Continuous Visual Canvas: Product Details & Product Masterpiece Sharing ONE Background (Attachment 1) */}
       <div className="relative overflow-hidden border-t border-[#E0CFBA]/70">
-        {/* ONE continuous photographic background spanning both sections seamlessly */}
+        {/* ONE continuous photographic background spanning both sections seamlessly.
+            Intentionally soft-blurred at full resolution (blur + slight upscale
+            of the source file) so it reads as a dreamy backdrop, never pixelated.
+            The hero background is left exactly as it is. */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none blur-[5px] scale-110"
           style={{
             backgroundImage: "url('/assets/bg-shared-details-masterpiece.jpg')",
           }}
@@ -53,11 +56,11 @@ export default function Home() {
       {/* 6. Customer Impressions & Continuously Sliding Reviews */}
       <Testimonials />
 
-      {/* 7. Simplified Centered Order Online Section (Synchronized Quantity & Price) */}
-      <OrderSection selectedTier={selectedTier} />
-
-      {/* 8. Frequently Asked Questions */}
+      {/* 7. Frequently Asked Questions (before the order form) */}
       <FAQ />
+
+      {/* 8. Simplified Centered Order Online Section (Synchronized Quantity & Price) */}
+      <OrderSection selectedTier={selectedTier} />
 
       {/* 9. Coffee Brown Luxury Footer */}
       <Footer />

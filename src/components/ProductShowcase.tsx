@@ -28,7 +28,13 @@ export default function ProductShowcase({
       <div className="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">
         
         {/* Centered Vertical Product Selection Container: Solid Warm Cream (NO Photographic Image) */}
-        <div className="relative max-w-lg mx-auto rounded-3xl bg-[#F4EAE0] border border-[#E0CFBA] p-7 sm:p-11 text-center space-y-7 shadow-xl z-10 transition-shadow duration-300">
+        <div className="relative max-w-lg mx-auto rounded-[2rem] bg-[#F4EAE0] border border-[#CDB69D] ring-1 ring-[#E0CFBA] p-7 sm:p-11 text-center space-y-7 shadow-[0_24px_60px_-18px_rgba(73,51,38,0.4)] z-10 transition-shadow duration-300 hover:shadow-[0_28px_70px_-18px_rgba(73,51,38,0.5)] overflow-hidden">
+          {/* Corner ornaments + gold hairline top accent */}
+          <span aria-hidden="true" className="absolute top-3 left-3 w-2.5 h-2.5 rotate-45 bg-[#CDB69D]" />
+          <span aria-hidden="true" className="absolute top-3 right-3 w-2.5 h-2.5 rotate-45 bg-[#CDB69D]" />
+          <span aria-hidden="true" className="absolute bottom-3 left-3 w-2.5 h-2.5 rotate-45 bg-[#CDB69D]" />
+          <span aria-hidden="true" className="absolute bottom-3 right-3 w-2.5 h-2.5 rotate-45 bg-[#CDB69D]" />
+          <span aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[3px] rounded-full bg-gradient-to-r from-transparent via-[#CDB69D] to-transparent" />
           
           {/* Header */}
           <div className="space-y-2">
@@ -69,10 +75,10 @@ export default function ProductShowcase({
                     key={tier.id}
                     type="button"
                     onClick={() => onSelectTier(tier)}
-                    className={`py-3 px-2 rounded-2xl border text-center transition-all cursor-pointer relative min-h-[64px] flex flex-col justify-center items-center ${
+                    className={`btn-lift py-3 px-2 rounded-2xl border text-center cursor-pointer relative min-h-[64px] flex flex-col justify-center items-center ${
                       isSelected
-                        ? "bg-[#493326] text-[#F4EAE0] border-[#493326] shadow-sm font-bold scale-[1.02]"
-                        : "bg-[#EDE2D0] text-[#735744] border-[#E0CFBA] hover:border-[#735744] font-medium"
+                        ? "bg-[#493326] text-[#F4EAE0] border-[#493326] shadow-md font-bold scale-[1.02]"
+                        : "bg-[#EDE2D0] text-[#735744] border-[#E0CFBA] hover:border-[#735744] hover:shadow-sm font-medium"
                     }`}
                   >
                     {tier.badge && (
@@ -117,11 +123,14 @@ export default function ProductShowcase({
           <div>
             <a
               href="#order"
-              className="shine-button inline-flex w-full items-center justify-center py-3.5 sm:py-4 px-8 rounded-full bg-[#493326] text-[#F4EAE0] text-xs sm:text-sm font-semibold tracking-wider hover:bg-[#38261C] active:scale-95 transition-all shadow-md cursor-pointer"
+              className="shine-button btn-lift inline-flex w-full items-center justify-center gap-2 py-3.5 sm:py-4 px-8 rounded-full bg-[#493326] text-[#F4EAE0] text-xs sm:text-sm font-semibold tracking-wider hover:bg-[#5C4033] active:scale-95 transition-all shadow-md cursor-pointer"
             >
               <span className="relative z-10">
                 {getWeightLabel(selectedTier.weightGrams)} প্যাকেজ অর্ডার করুন
               </span>
+              <svg className="relative z-10 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </a>
           </div>
 

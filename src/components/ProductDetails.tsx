@@ -96,7 +96,7 @@ export default function ProductDetails() {
               return (
                 <div
                   key={idx}
-                  className={`group relative rounded-2xl border border-[#E0CFBA]/80 bg-[#F4EAE0]/75 p-5 sm:p-6 transition-all duration-300 hover:bg-[#493326] hover:border-[#493326] hover:shadow-lg hover:-translate-y-0.5 cursor-pointer flex flex-col items-center text-center ${
+                  className={`group relative rounded-2xl border border-[#E0CFBA]/80 bg-[#F4EAE0]/75 p-5 sm:p-6 transition-all duration-300 hover:bg-[#493326] hover:border-[#CDB69D] hover:ring-1 hover:ring-[#CDB69D] hover:shadow-xl hover:-translate-y-1.5 cursor-pointer flex flex-col items-center text-center ${
                     idx === 3 || idx === 4
                       ? "sm:col-span-1 lg:translate-x-1/2"
                       : ""

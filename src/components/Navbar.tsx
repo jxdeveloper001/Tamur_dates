@@ -42,7 +42,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="hover:text-[#493326] transition-colors"
+              className="hover:text-[#493326] hover:underline underline-offset-8 decoration-[#CDB69D] decoration-2 transition-all"
             >
               {link.label}
             </a>
@@ -53,7 +53,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <a
             href="#order"
-            className="shine-button px-5 sm:px-6 py-2.5 rounded-full bg-[#493326] text-[#F4EAE0] text-xs font-semibold tracking-wider hover:bg-[#38261C] active:scale-95 transition-all shadow-xs cursor-pointer"
+            className="shine-button btn-lift px-5 sm:px-6 py-2.5 rounded-full bg-[#493326] text-[#F4EAE0] text-xs font-semibold tracking-wider hover:bg-[#5C4033] active:scale-95 transition-all shadow-xs cursor-pointer"
           >
             <span className="relative z-10">অর্ডার করুন</span>
           </a>
@@ -93,7 +93,7 @@ export default function Navbar() {
           <a
             href="#order"
             onClick={() => setMobileMenuOpen(false)}
-            className="shine-button block w-full text-center py-3 rounded-xl bg-[#493326] text-[#F4EAE0] text-xs font-bold tracking-wider cursor-pointer shadow-xs"
+            className="shine-button btn-lift block w-full text-center py-3 rounded-xl bg-[#493326] text-[#F4EAE0] text-xs font-bold tracking-wider cursor-pointer shadow-xs"
           >
             <span className="relative z-10">অর্ডার করুন</span>
           </a>

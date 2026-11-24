@@ -11,7 +11,10 @@ function ReviewCard({
   testimonial: (typeof TESTIMONIALS)[0];
 }) {
   return (
-    <div className="w-[280px] sm:w-[350px] shrink-0 rounded-2xl p-5 bg-[#F4EAE0] border border-[#E0CFBA] flex flex-col justify-between space-y-3.5 shadow-xs hover:border-[#735744]/50 hover:shadow-sm transition-all duration-300 select-none">
+    <div className="relative w-[280px] sm:w-[350px] shrink-0 rounded-2xl p-5 bg-[#F4EAE0] border border-[#E0CFBA] flex flex-col justify-between space-y-3.5 shadow-xs overflow-hidden hover:border-[#CDB69D] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 select-none">
+      {/* Gold top accent + quote mark */}
+      <span aria-hidden="true" className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#CDB69D] to-transparent" />
+      <span aria-hidden="true" className="absolute -top-1 right-4 font-bengali-heading text-5xl text-[#CDB69D]/50 leading-none select-none">”</span>
       {/* Top: Star Rating + Verified Badge */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-1 text-[#735744]">

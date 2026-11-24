@@ -36,12 +36,15 @@ export default function FAQ() {
             return (
               <div
                 key={faq.question}
-                className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+                className={`relative rounded-2xl border transition-all duration-300 overflow-hidden ${
                   isOpen
-                    ? "border-[#493326]/30 bg-[#F4EAE0] shadow-sm"
-                    : "border-[#E0CFBA] bg-[#F4EAE0]/85 hover:border-[#735744]/40 hover:bg-[#F4EAE0]"
+                    ? "border-[#CDB69D] bg-[#F4EAE0] shadow-md"
+                    : "border-[#E0CFBA] bg-[#F4EAE0]/85 hover:border-[#CDB69D] hover:bg-[#F4EAE0] hover:shadow-sm hover:-translate-y-0.5"
                 }`}
               >
+                {isOpen && (
+                  <span aria-hidden="true" className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#CDB69D] via-[#735744] to-[#CDB69D]" />
+                )}
                 <button
                   type="button"
                   onClick={() => toggle(idx)}

@@ -56,7 +56,7 @@ export default function BrandStory() {
         </div>
 
         {/* Sophisticated Editorial Pillars (Seamless Layout with Subtle Dividers) */}
-        <div className="rounded-3xl border border-[#E0CFBA] bg-[#F4EAE0]/75 backdrop-blur-xs p-6 sm:p-10 shadow-xs">
+        <div className="rounded-3xl border border-[#E0CFBA] bg-[#F4EAE0]/75 backdrop-blur-xs p-6 sm:p-10 shadow-xs hover:shadow-lg hover:border-[#CDB69D] transition-all duration-300">
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#E0CFBA]/80">
             {pillars.map((pillar, idx) => (
               <div
@@ -71,7 +71,7 @@ export default function BrandStory() {
               >
                 {/* Subtle, Normal-Sized Numbering */}
                 <div className="flex items-center justify-center md:justify-start gap-2">
-                  <span className="text-xs font-medium text-[#735744]/80 tracking-wider">
+                  <span className="font-bengali-heading text-base text-[#493326] tracking-wide">
                     ধাপ {pillar.num}
                   </span>
                   <span className="w-1.5 h-1.5 rounded-full bg-[#CDB69D]" />
