@@ -166,6 +166,35 @@ body {
   z-index: 1;
 }
 
+/* Periodic light sweep across the over-photo headings — the same slow,
+   elegant shine as the order container, but clipped to the text itself.
+   Base colour is the user's #8E7054; a pale cream highlight travels
+   across the letters every few seconds, then parks off-screen. */
+@keyframes text-shine {
+  0%, 65% {
+    background-position: 120% 0;
+  }
+  82%, 100% {
+    background-position: -20% 0;
+  }
+}
+
+.text-shine {
+  background: linear-gradient(
+    110deg,
+    #8E7054 42%,
+    #F6EFE4 50%,
+    #8E7054 58%
+  );
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: text-shine 5.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
 /* Continuous Review Slider Animation (Seamless Infinite RTL Marquee) */
 @keyframes rtl-marquee {
   0% {
@@ -198,6 +227,12 @@ body {
   .shine-button::after {
     display: none !important;
     animation: none !important;
+  }
+  .text-shine {
+    animation: none !important;
+    background: none !important;
+    color: #8E7054 !important;
+    -webkit-text-fill-color: #8E7054 !important;
   }
   .reviews-marquee-track {
     animation: none !important;
