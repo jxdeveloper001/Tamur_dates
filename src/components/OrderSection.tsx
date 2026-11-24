@@ -127,14 +127,14 @@ export default function OrderSection({ selectedTier }: OrderSectionProps) {
 
         {/* 3. The Order Form Container — gold double frame, corner ornaments,
             periodic light shine sweeping across it every few seconds */}
-        <div className="order-shine max-w-xl mx-auto rounded-[2rem] bg-[#F4EAE0] border border-[#CDB69D] p-6 sm:p-10 space-y-7 shadow-[0_24px_60px_-18px_rgba(73,51,38,0.45)] ring-1 ring-[#E0CFBA]">
+        <div className="order-shine max-w-xl mx-auto rounded-[2rem] bg-[#F4EAE0] border-2 border-[#A98548] p-6 sm:p-10 space-y-7 shadow-[0_24px_60px_-18px_rgba(73,51,38,0.45)] ring-2 ring-[#CDB69D]/70">
           {/* Corner ornaments */}
-          <span aria-hidden="true" className="absolute top-3 left-3 w-2.5 h-2.5 rotate-45 bg-[#CDB69D] z-[2]" />
-          <span aria-hidden="true" className="absolute top-3 right-3 w-2.5 h-2.5 rotate-45 bg-[#CDB69D] z-[2]" />
-          <span aria-hidden="true" className="absolute bottom-3 left-3 w-2.5 h-2.5 rotate-45 bg-[#CDB69D] z-[2]" />
-          <span aria-hidden="true" className="absolute bottom-3 right-3 w-2.5 h-2.5 rotate-45 bg-[#CDB69D] z-[2]" />
+          <span aria-hidden="true" className="absolute top-3 left-3 w-3 h-3 rotate-45 bg-[#A98548] z-[2]" />
+          <span aria-hidden="true" className="absolute top-3 right-3 w-3 h-3 rotate-45 bg-[#A98548] z-[2]" />
+          <span aria-hidden="true" className="absolute bottom-3 left-3 w-3 h-3 rotate-45 bg-[#A98548] z-[2]" />
+          <span aria-hidden="true" className="absolute bottom-3 right-3 w-3 h-3 rotate-45 bg-[#A98548] z-[2]" />
           {/* Gold hairline top accent */}
-          <span aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[3px] rounded-full bg-gradient-to-r from-transparent via-[#CDB69D] to-transparent z-[2]" />
+          <span aria-hidden="true" className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-1 rounded-full bg-gradient-to-r from-transparent via-[#A98548] to-transparent z-[2]" />
 
           <div className="relative z-[2] space-y-7">
             {/* How ordering works — 3 steps */}

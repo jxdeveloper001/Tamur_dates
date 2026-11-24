@@ -84,18 +84,20 @@ body {
   position: absolute;
   top: -10%;
   left: 0;
-  width: 38%;
+  width: 45%;
   height: 120%;
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.55) 50%,
+    rgba(255, 255, 255, 0.75) 50%,
     transparent 100%
   );
   transform: translateX(-180%) skewX(-18deg);
-  animation: container-shine 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: container-shine 5.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   pointer-events: none;
-  z-index: 1;
+  /* Above the form content so the sweep is actually visible (it never
+     blocks clicks: pointer-events is none). */
+  z-index: 30;
 }
 
 /* Richer button hover: gentle lift + deeper shadow on every primary CTA */
