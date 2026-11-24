@@ -30,13 +30,14 @@ export default function Home() {
       {/* 4 & 5. Continuous Visual Canvas: Product Details & Product Masterpiece Sharing ONE Background (Attachment 1) */}
       <div className="relative overflow-hidden border-t border-[#E0CFBA]/70">
         {/* ONE continuous photographic background spanning both sections seamlessly.
-            The wooden-board dates photo, lightly blurred (2px) — real blur, not
-            a transparent layer. Scaled 110% so the blurred edges never show.
+            The wooden-board dates photo with the cream blur BAKED INTO the image
+            itself (soft blur + the site's own cream colour mixed into the pixels)
+            — fully opaque, no CSS filter, no transparent layer on top.
             The hero background is left exactly as it is. */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none blur-[2px] scale-110"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
           style={{
-            backgroundImage: "url('/assets/bg-details-wooden-dates-v2.jpg')",
+            backgroundImage: "url('/assets/bg-details-wooden-dates-v3.jpg')",
           }}
           aria-hidden="true"
         />

@@ -92,12 +92,13 @@ export default function OrderSection({ selectedTier }: OrderSectionProps) {
   return (
     <section id="order" className="relative py-20 sm:py-28 text-[#493326] overflow-hidden">
       {/* 1. Surrounding Order Section Photographic Background (mosque sunset
-          & dates photo, lightly blurred 2px — real blur, not a transparent
-          layer; scaled 110% so the blurred edges never show) */}
+          & dates photo with the cream blur BAKED INTO the image itself —
+          soft blur + the site's own cream colour mixed into the pixels,
+          fully opaque, no CSS filter, no transparent layer) */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none blur-[2px] scale-110"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
         style={{
-          backgroundImage: "url('/assets/bg-order-mosque-sunset.jpg')",
+          backgroundImage: "url('/assets/bg-order-mosque-sunset-v2.jpg')",
         }}
         aria-hidden="true"
       />
